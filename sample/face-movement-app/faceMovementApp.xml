@@ -285,15 +285,27 @@ function onFaceTrackingChanged(event) {
  */
 function startHeadTracking() {
     // Create hat overlay.
-    var topHat = gapi.hangout.av.effects.createImageResource(
-        'http://hangoutmediastarter.appspot.com/static/topHat.png');
-    var overlay = topHat.createFaceTrackingOverlay(
-        {'trackingFeature':
-         gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
-         'scaleWithFace': true,
-         'rotateWithFace': true,
-         'scale': 1.0});
-    overlay.setVisible(true);
+//    var topHat = gapi.hangout.av.effects.createImageResource(
+//        'http://hangoutmediastarter.appspot.com/static/topHat.png');
+//    var overlay = topHat.createFaceTrackingOverlay(
+//        {'trackingFeature':
+//         gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+//         'scaleWithFace': true,
+//         'rotateWithFace': true,
+//         'scale': 1.0});
+//    overlay.setVisible(true);
+
+    // Lamp me?
+    var lampHat = gapi.hangout.av.effects.createImageResource('http://jonuy.github.com/hangout-apps/sample/face-movement-app/res/lamp.png');
+    var lampOverlay = lampHat.createFaceTrackingOverlay(
+        {
+            'trackingFeature': gapi.hangout.av.effects.FaceTrackingFeature.NOSE_ROOT,
+            'scaleWithFace': true,
+            'rotateWithFace': true,
+            'scale': 1.0
+        }
+    );
+    lampOverlay.setVisible(true);
 
     // Add event handler.
     gapi.hangout.av.effects.onFaceTrackingDataChanged.
