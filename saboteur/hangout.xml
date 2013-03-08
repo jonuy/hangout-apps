@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Module>
+  <ModulePrefs title="Yes/No/Maybe" height="100" width="550">
+  <Require feature="dynamic-height"/>
+  <Require feature="rpc"/>
+</ModulePrefs>
+<Content type="html"><![CDATA[
+  <!DOCTYPE html>
+  <script type="text/javascript" src="//hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.2"></script>
+  <script type="text/javascript" src="js/Animate.js"></script>
+  <script type="text/javascript" src="js/Scroller.js"></script>
+  <script type="text/javascript" src="js/EasyScroller.js"></script>
+  <script type="text/javascript" src="js/saboteur.js"></script>
+
+]]></Content>
+</Module>
